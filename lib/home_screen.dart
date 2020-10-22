@@ -4,8 +4,15 @@ import 'package:onboard_ui/main_screen.dart';
 
 class HomePage extends StatelessWidget {
   final pageDecoration = PageDecoration(
-    titleTextStyle: TextStyle(),
-    bodyTextStyle: TextStyle(),
+    titleTextStyle: TextStyle(
+      fontSize: 24.0,
+      fontWeight: FontWeight.bold,
+    ),
+    bodyTextStyle: TextStyle(
+      fontWeight: FontWeight.w500,
+    ),
+    descriptionPadding: EdgeInsets.symmetric(horizontal: 20.0),
+    imageFlex: 2,
   );
 
   List<PageViewModel> getPages() {
@@ -55,11 +62,21 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: IntroductionScreen(
         //the done button that is going to be shown at the end
-        done: Text("Done"),
+        done: Text(
+          "Done",
+          style: TextStyle(
+            color: Colors.blue,
+          ),
+        ),
 
         //the skip button notice the showskipbutton has to be set to true in order
         //for it to appear on screen unlike the done button
-        skip: Text("Skip"),
+        skip: Text(
+          "Skip",
+          style: TextStyle(
+            color: Colors.blue,
+          ),
+        ),
         showSkipButton: true,
 
         //the next button that is goint to appear on screen if the shownextbutton is true
@@ -83,14 +100,14 @@ class HomePage extends StatelessWidget {
         globalBackgroundColor: Colors.white,
 
         //used for animation
-        curve: Curves.elasticIn,
+        curve: Curves.decelerate,
         animationDuration: 350,
 
         //decoraiton example for the dots for navigation
         dotsDecorator: DotsDecorator(
           shape: StadiumBorder(),
           activeShape: StadiumBorder(),
-          activeColor: Colors.red,
+          activeColor: Colors.purple,
           color: Colors.blue,
           spacing: EdgeInsets.symmetric(horizontal: 5.0),
         ),
