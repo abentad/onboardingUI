@@ -3,6 +3,8 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:onboard_ui/main_screen.dart';
 
 class HomePage extends StatelessWidget {
+  //
+  //decoration for the pages
   final pageDecoration = PageDecoration(
     titleTextStyle: TextStyle(
       fontSize: 24.0,
@@ -14,7 +16,8 @@ class HomePage extends StatelessWidget {
     descriptionPadding: EdgeInsets.symmetric(horizontal: 20.0),
     imageFlex: 2,
   );
-
+  //
+  //List of Pages that are going to be displayed on the onboarding screen ui
   List<PageViewModel> getPages() {
     return [
       PageViewModel(
